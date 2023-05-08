@@ -1,0 +1,31 @@
+.navbar {
+    .logo {
+        width: 255px;
+    }
+
+    .links {
+        font-family: var(--ff-primary);
+        font-size: 24px;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 0.5rem;
+
+        .link {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: black;
+                transition: width 250ms ease-out;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
